@@ -1,1 +1,46 @@
-<h1>i am the chatrrom index file</h1>
+<h2 class="ui center aligned icon header">
+  <i class="circular orange users icon"></i>
+  Say something
+</h2>
+
+<div class="ui two column grid container">
+  <div class="twelve wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content">
+        <div class="ui  feed">
+          <h4 class="ui header">Followers Activity</h4>
+        <%= render @messages %>
+      
+        </div>
+      </div>
+      <div class="extra content">
+        <form class="ui reply form">
+          <div class="field">
+            <div class="ui fluid icon input">
+             <input type="text" placeholder="Enter a message...">
+              <i class="borderd inverted orange edit icon"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="four wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content">
+        <div class="ui inverted vertical pointing menu">
+          <a class="active item">
+            Home
+          </a>
+          <a class="item">
+            Messages
+          </a>
+          <a class="item">
+            Friends
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
