@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+    before_action :logged_to_redirect, only: [:new, :create]
     def new
         
     end
@@ -21,6 +21,16 @@ class SessionsController < ApplicationController
         flash[:success] = "You have successfully logged out"
         redirect_to login_path
       end
+
+     private
+     
+    def logged_to_redirect
+        if logged_in?
+            flash[:error] = "You have been logged in"
+            redirect_to root_path
+        end
+        
+    end
     
 
 end
